@@ -1,0 +1,164 @@
+/* Created by Tivotal */
+
+/* Google Fonts(Poppins) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background: #000;
+}
+
+.container {
+  position: relative;
+  width: 400px;
+  background: #111;
+  border: 1px solid #444;
+  border-radius: 5px;
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .post {
+  display: none;
+}
+
+.container .post .text {
+  color: #666;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.container .post .edit {
+  color: #666;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.container .post .edit:hover {
+  text-decoration: underline;
+}
+
+.container .wrapper input {
+  display: none;
+}
+
+.container .wrapper label {
+  font-size: 40px;
+  color: #444;
+  padding: 10px;
+  float: right;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.container .wrapper input:checked ~ label {
+  color: #fd4;
+}
+
+.container .wrapper input#rate5:checked ~ label {
+  color: #fe7;
+  text-shadow: 0 0 20px #952;
+}
+
+.container .wrapper form {
+  display: none;
+}
+
+.container .wrapper input:checked ~ form {
+  display: block;
+}
+
+.container .wrapper form header {
+  color: #fe7;
+  width: 100%;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 500;
+  margin: 5px 0 20px 0;
+  transition: all 0.2s ease;
+}
+
+.container .wrapper input#rate5:checked ~ form header::before {
+  content: "I loved it";
+}
+
+.container .wrapper input#rate4:checked ~ form header::before {
+  content: "I liked it";
+}
+
+.container .wrapper input#rate3:checked ~ form header::before {
+  content: "It was Ok";
+}
+
+.container .wrapper input#rate2:checked ~ form header::before {
+  content: "I didn't like it";
+}
+
+.container .wrapper input#rate1:checked ~ form header::before {
+  content: "I hated it";
+}
+
+.container .wrapper form .textarea {
+  height: 100px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.container .wrapper form .textarea textarea {
+  height: 100%;
+  width: 100%;
+  color: #eee;
+  border: 1px solid #333;
+  background: #222;
+  padding: 10px;
+  font-size: 17px;
+  resize: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+.container .wrapper form .textarea textarea:focus {
+  border-color: #444;
+}
+
+.container .wrapper form .btn {
+  height: 45px;
+  width: 100%;
+  margin: 15px 0;
+}
+
+.container .wrapper form .btn button {
+  height: 100%;
+  width: 100%;
+  font-size: 17px;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-radius: 5px;
+  border: 1px solid #444;
+  background: #222;
+  color: #999;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.container .wrapper form .btn button:hover {
+  background: #1b1b1b;
+}
